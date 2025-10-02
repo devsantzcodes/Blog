@@ -130,3 +130,21 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

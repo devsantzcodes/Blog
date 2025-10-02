@@ -148,3 +148,16 @@ footer a:hover {
     padding: 10px;
   }
 }
+
+a {
+  transition: 0.3s;
+}
+
+.post:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+aside:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

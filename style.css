@@ -90,3 +90,26 @@ aside ul {
 aside ul li {
   margin-bottom: 8px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}

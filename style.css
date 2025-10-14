@@ -20,29 +20,27 @@ body {
 
 /* --------- CONTAINER PRINCIPAL --------- */
 .container {
-  padding: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-}
-
-.containers {
-  width: 90%;
+  width: 80%;
+  height:70%;
+  border-radius:20px;
   max-width: 1100px;
   margin: auto;
+
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --------- HEADER --------- */
 
+/* --------- HEADER --------- */
 header {
   background: #222;
   color: #fff;
   padding: 20px;
-  display: flex;
+  margin-bottom: 20px;
 }
 
 header h1 {
@@ -85,57 +83,37 @@ nav ul li a:hover {
 /* --------- LAYOUT PRINCIPAL --------- */
 main {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 /* --------- POSTS --------- */
 .posts {
   flex: 3;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
-}
-
-.meta {
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
 .post {
-  flex: 1 1 300px;
-  max-width: 500px;
-  border-bottom: 1px solid #969696;
-  background-color: rgb(240, 240, 240);
-  padding: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
 }
 
 .post img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
-  padding-top: 30px;
   margin-bottom: 10px;
-  margin: auto;
-  border-radius: 15px black;
-  text-align: center;
 }
 
 .post h2 {
   color: #222;
-  text-align: center;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 1.4rem;
 }
 
 .post p {
-  font-size: 20px;
-  padding-top: 30px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  display: flex;
-  margin: auto;
-  text-align: justify;
 }
 
 .read-more {
@@ -333,6 +311,7 @@ button {
   color: #ccc;
 }
 
+
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #333;
@@ -399,4 +378,132 @@ body.dark-mode .search-form input::placeholder {
 /* Header positioning for absolute elements */
 header {
   position: relative;
+
+/* ======= LAYOUT FLEXBOX ======= */
+
+/* Header centralizado */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Menu organizado */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Layout principal */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ======= LAYOUT FLEXBOX  ======= */
+
+/* --- Header centralizado e organizado --- */
+header {
+  display: flex;
+  flex-direction: column; /* título e subtítulo empilhados */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Navegação (menu) --- */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* --- Área principal (posts + sidebar) --- */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* --- Sessão dos posts --- */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 3; /* ocupa 3x o tamanho da sidebar */
+}
+
+/* Cada post interno */
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* --- Sidebar organizada verticalmente --- */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px;
+  flex: 1; /* menor que a área de posts */
+}
+
+/* --- Newsletter e widgets alinhados --- */
+.widget {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- Rodapé centralizado --- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* --- Formulário com alinhamento flex --- */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Responsividade (telas pequenas) --- */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .posts, aside {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
 }

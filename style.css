@@ -302,3 +302,71 @@ button {
   text-align: justify;
   color: #ccc;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode header {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode nav ul li a {
+  color: #fff;
+}
+
+body.dark-mode .post {
+  border-bottom: 1px solid #555;
+}
+
+body.dark-mode aside {
+  background: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode aside h3 {
+  color: #fff;
+  border-bottom: 1px solid #666;
+}
+
+body.dark-mode aside ul li a {
+  color: #ccc;
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode .widget.sobre-o-blog {
+  background: linear-gradient(135deg, #333, #444);
+  color: #e0e0e0;
+}
+
+body.dark-mode .widget.sobre-o-blog h3 {
+  color: #00bfff;
+}
+
+body.dark-mode .widget.sobre-o-blog p {
+  color: #ccc;
+}
+
+body.dark-mode .search-form input,
+body.dark-mode .search-form button {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .search-form input::placeholder {
+  color: #ccc;
+}
+
+/* Header positioning for absolute elements */
+header {
+  position: relative;
+}

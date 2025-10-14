@@ -1,3 +1,4 @@
+87% de armazenamento usado … Se você ficar sem espaço, não poderá salvar arquivos no Drive nem usar o Gmail. Aproveite 30 GB de armazenamento por R$ 4,50 R$ 1 por mês, durante 3 meses.
 /* ===============================
    style.css - Blog 
    Estilo simples e tradicional
@@ -20,19 +21,29 @@ body {
 
 /* --------- CONTAINER PRINCIPAL --------- */
 .container {
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+
+.containers {
   width: 90%;
   max-width: 1100px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* --------- HEADER --------- */
+
 header {
   background: #222;
   color: #fff;
   padding: 20px;
-  margin-bottom: 20px;
+  display: flex;
 }
 
 header h1 {
@@ -75,37 +86,57 @@ nav ul li a:hover {
 /* --------- LAYOUT PRINCIPAL --------- */
 main {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
 /* --------- POSTS --------- */
 .posts {
   flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.meta {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .post {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
+  flex: 1 1 300px;
+  max-width: 500px;
+  border-bottom: 1px solid #969696;
+  background-color: rgb(240, 240, 240);
+  padding: 15px;
 }
 
 .post img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   display: block;
+  padding-top: 30px;
   margin-bottom: 10px;
+  margin: auto;
+  border-radius: 15px black;
+  text-align: center;
 }
 
 .post h2 {
   color: #222;
+  text-align: center;
   margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 30px;
 }
 
 .post p {
-  font-size: 1.5rem;
+  font-size: 20px;
+  padding-top: 30px;
   margin-bottom: 10px;
+  display: flex;
+  margin: auto;
+  text-align: justify;
 }
 
 .read-more {

@@ -1,3 +1,4 @@
+87% de armazenamento usado … Se você ficar sem espaço, não poderá salvar arquivos no Drive nem usar o Gmail. Aproveite 30 GB de armazenamento por R$ 4,50 R$ 1 por mês, durante 3 meses.
 /*
   Arquivo: script.js
   Projeto: O Blog do Macho (Versão Acadêmica)

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Cabeçalho do documento HTML.
-         Inclui metadados essenciais para SEO e compartilhamento em redes sociais (Open Graph).
-         Esta parte foi ampliada em relação à Tarefa 6, com novas meta tags, palavras-chave e descrições. -->
+    <!-- ==========================================================
+         Cabeçalho do documento: metadados e SEO
+         ========================================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -15,6 +15,8 @@
       content="blog, macho, masculinidade, comportamento, humor, estilo de vida, relacionamentos"
     />
     <meta name="author" content="Equipe do Blog do Macho" />
+
+    <!-- Metadados para compartilhamento em redes sociais -->
     <meta property="og:title" content="O Blog do Macho" />
     <meta
       property="og:description"
@@ -23,24 +25,25 @@
     <meta property="og:image" content="https://example.com/og-image.png" />
     <meta property="og:url" content="https://example.com/blog" />
     <meta property="og:type" content="website" />
+
+    <!-- Link para arquivo de estilo CSS externo -->
     <link rel="stylesheet" href="style.css" />
+
     <title>O Blog do Macho - Comportamento, Humor e Opinião</title>
   </head>
-
   <body>
-    <!-- ===========================
-         CABEÇALHO PRINCIPAL
-         Agora contém título, menu de navegação e barra de pesquisa.
-         A Tarefa 6 possuía apenas o título e menu básico; esta versão adiciona a tagline e o campo de busca.
-    ============================ -->
+    <!-- ==========================================================
+         Cabeçalho do site: título, slogan, menu e pesquisa
+         ========================================================== -->
     <header id="topo">
       <div class="containers">
+        <!-- Título principal do blog -->
         <h1>O Blog do Macho</h1>
         <p class="tagline">
           Um espaço masculino sobre comportamento, humor e opinião.
         </p>
 
-        <!-- Menu principal expandido -->
+        <!-- Menu de navegação principal -->
         <nav>
           <ul>
             <li><a href="#">Início</a></li>
@@ -51,462 +54,573 @@
           </ul>
         </nav>
 
-        <!-- Novo elemento: barra de pesquisa -->
+        <!-- Barra de pesquisa -->
         <form class="search-form">
           <input type="text" placeholder="Buscar no blog..." />
           <button type="submit">Buscar</button>
         </form>
       </div>
+      <!-- Fim do cabeçalho -->
     </header>
 
-    <!-- ===========================
-         CONTEÚDO PRINCIPAL
-         Estrutura ampliada — o site agora apresenta 25 artigos organizados em seções.
-         Na Tarefa 6, existiam apenas artigos de demonstração; aqui foi aplicado conteúdo temático completo.
-    ============================ -->
+    <!-- ==========================================================
+         Conteúdo principal: artigos do blog
+         ========================================================== -->
     <main class="container">
       <section id="conteudo-principal">
         <section class="posts">
-          <!-- Cada bloco <article> representa uma postagem.
-               Foram criados 25 posts, cada um com título, data, imagem e resumo. -->
-          <!-- A seguir, exemplos representativos (os demais seguem o mesmo padrão): -->
-
+          <!-- ==========================================================
+               ARTIGO 1
+               ========================================================== -->
           <article class="post">
             <h2>Manual do Macho Moderno</h2>
-            <p class="meta">Publicado em 01/10/2025 por <strong>Admin</strong></p>
+            <p class="meta">
+              Publicado em 01/10/2025 por <strong>Admin</strong>
+            </p>
             <img src="1.png" alt="Homem pensativo" />
-            <p><b>Ser homem no século XXI [...]</b></p>
+            <p>
+              <b>
+                Ser homem no século XXI é muito mais do que cultivar músculos. É
+                sobre inteligência, humor, atitude e a capacidade de rir de si
+                mesmo. O macho moderno precisa equilibrar tradições e novos
+                valores.
+              </b>
+            </p>
             <a href="#" class="ler-mais">Ler mais...</a>
           </article>
 
-          <!-- ... demais 24 artigos seguem o mesmo modelo.
-               Esta expansão é uma das maiores evoluções desde a Tarefa 6, que tinha estrutura limitada. -->
+          <!-- ==========================================================
+               ARTIGO 2
+               ========================================================== -->
+          <article class="post">
+            <h2>O mito da masculinidade tóxica</h2>
+            <p class="meta">
+              Publicado em 20/09/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="4.png" alt="Macho alfa" />
+            <p>
+              <b>
+                Nem todo comportamento masculino é tóxico. Este artigo discute
+                como diferenciar masculinidade saudável de atitudes
+                problemáticas, sem cair em extremos e rótulos fáceis.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 3
+               ========================================================== -->
+          <article class="post">
+            <h2>Moda masculina: menos é mais</h2>
+            <p class="meta">
+              Publicado em 10/09/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="2.png" alt="Homem estiloso" />
+            <p>
+              <b>
+                Não é preciso gastar fortunas para se vestir bem. O estilo está
+                nos detalhes: uma camisa básica, um jeans bem cortado e um
+                sapato limpo já transmitem presença e confiança.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 4
+               ========================================================== -->
+          <article class="post">
+            <h2>Relacionamentos sem drama</h2>
+            <p class="meta">
+              Publicado em 05/09/2025 por <strong>Admin</strong>
+            </p>
+            <img src="3.png" alt="Casal sorrindo" />
+            <p>
+              <b>
+                Drama em excesso acaba com qualquer relação. Aprenda a
+                identificar quando vale a pena discutir e quando é melhor
+                simplesmente rir e seguir em frente.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 5
+               ========================================================== -->
+          <article class="post">
+            <h2>Humor: a arma secreta do macho</h2>
+            <p class="meta">
+              Publicado em 28/08/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="10.png" alt="Homem rindo" />
+            <p>
+              <b>
+                Uma boa piada pode abrir portas e conquistar pessoas. O humor é
+                sinal de inteligência e autoconfiança, atributos indispensáveis
+                para qualquer homem moderno.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 6
+               ========================================================== -->
+          <article class="post">
+            <h2>Carreira: seja dono do seu tempo</h2>
+            <p class="meta">
+              Publicado em 15/08/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="5.png" alt="Homem no escritório" />
+            <p>
+              <b>
+                Não basta apenas trabalhar duro. Saber organizar seu tempo é
+                fundamental para equilibrar carreira, vida pessoal e lazer. O
+                macho moderno valoriza sua liberdade.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 7
+               ========================================================== -->
+          <article class="post">
+            <h2>Esporte: disciplina e diversão</h2>
+            <p class="meta">
+              Publicado em 01/08/2025 por <strong>Admin</strong>
+            </p>
+            <img src="6.png" alt="Homem praticando esporte" />
+            <p>
+              <b>
+                Praticar esportes é mais do que manter o corpo em forma. É um
+                exercício de disciplina, estratégia e convivência. Além de tudo,
+                é divertido.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 8
+               ========================================================== -->
+          <article class="post">
+            <h2>Macho e tecnologia</h2>
+            <p class="meta">
+              Publicado em 20/07/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="7.png" alt="Homem usando celular" />
+            <p>
+              <b>
+                O homem moderno não vive sem tecnologia, mas precisa usá-la com
+                inteligência. Do smartphone às redes sociais, tudo deve ser
+                ferramenta, não prisão.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 9
+               ========================================================== -->
+          <article class="post">
+            <h2>Viagem: expandindo horizontes</h2>
+            <p class="meta">
+              Publicado em 05/07/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="8.png" alt="Homem viajando" />
+            <p>
+              <b>
+                Viajar é mais do que turismo. É aprender sobre culturas, sobre
+                si mesmo e sobre o que realmente importa. Cada destino é uma
+                nova lição.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 10
+               ========================================================== -->
+          <article class="post">
+            <h2>Amizades que valem ouro</h2>
+            <p class="meta">
+              Publicado em 25/06/2025 por <strong>Admin</strong>
+            </p>
+            <img src="9.png" alt="Amigos reunidos" />
+            <p>
+              <b>
+                Amigos de verdade são poucos, mas valem mais do que qualquer
+                tesouro. O macho moderno sabe cultivar suas amizades com
+                lealdade e respeito.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 11
+               ========================================================== -->
+          <article class="post">
+            <h2>Culinária masculina: do básico ao gourmet</h2>
+            <p class="meta">
+              Publicado em 08/03/2026 por <strong>Equipe</strong>
+            </p>
+            <img src="11.png" alt="Homem cozinhando" />
+            <p>
+              <b>
+                Cozinhar não é tarefa feminina. Aprenda receitas simples e
+                práticas que impressionam sem complicar. Do churrasco perfeito
+                ao jantar romântico, domine a arte da cozinha.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 12
+               ========================================================== -->
+          <article class="post">
+            <h2>Finanças pessoais: liberdade financeira</h2>
+            <p class="meta">
+              Publicado em 01/06/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="12.jpg" alt="Homem com dinheiro" />
+            <p>
+              <b>
+                Dinheiro é liberdade. Aprenda a investir, economizar e
+                multiplicar seus recursos. O macho moderno entende que finanças
+                são fundamentais para uma vida plena.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 13
+               ========================================================== -->
+          <article class="post">
+            <h2>Saúde mental: força interior</h2>
+            <p class="meta">
+              Publicado em 20/05/2025 por <strong>Admin</strong>
+            </p>
+            <img src="13.png" alt="Homem meditando" />
+            <p>
+              <b>
+                Ser forte não significa ignorar emoções. Cuide da sua saúde
+                mental com exercícios, terapia e autocuidado. O verdadeiro macho
+                enfrenta seus demônios internos.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 14
+               ========================================================== -->
+          <article class="post">
+            <h2>Barbearia: arte e tradição</h2>
+            <p class="meta">
+              Publicado em 10/05/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="14.png" alt="Barbeiro trabalhando" />
+            <p>
+              <b>
+                A barba é símbolo de masculinidade. Aprenda a cuidar, cortar e
+                estilizar. Da navalha clássica aos produtos modernos, domine a
+                arte da barbearia.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 15
+               ========================================================== -->
+          <article class="post">
+            <h2>Paternidade: o maior desafio</h2>
+            <p class="meta">
+              Publicado em 01/05/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="15.png" alt="Pai com filho" />
+            <p>
+              <b>
+                Ser pai é a maior prova de masculinidade. Aprenda a equilibrar
+                autoridade e afeto, ensinando valores e criando laços eternos.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 16
+               ========================================================== -->
+          <article class="post">
+            <h2>Música: trilha sonora da vida</h2>
+            <p class="meta">
+              Publicado em 20/04/2025 por <strong>Admin</strong>
+            </p>
+            <img src="16.png" alt="Homem ouvindo música" />
+            <p>
+              <b>
+                Música define momentos. Do rock clássico ao hip-hop moderno,
+                descubra playlists que motivam, relaxam e inspiram o macho
+                moderno.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 17
+               ========================================================== -->
+          <article class="post">
+            <h2>Automóveis: paixão sobre rodas</h2>
+            <p class="meta">
+              Publicado em 10/04/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="17.png" alt="Carro esportivo" />
+            <p>
+              <b>
+                Carros são mais do que transporte. São liberdade, aventura e
+                status. Aprenda sobre manutenção, customização e os melhores
+                modelos para o homem moderno.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 18
+               ========================================================== -->
+          <article class="post">
+            <h2>Leitura: expandindo a mente</h2>
+            <p class="meta">
+              Publicado em 01/04/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="18.png" alt="Homem lendo livro" />
+            <p>
+              <b>
+                Ler é sinal de inteligência. Descubra livros que inspiram,
+                ensinam e divertem. Do clássico ao contemporâneo, construa sua
+                biblioteca pessoal.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 19
+               ========================================================== -->
+          <article class="post">
+            <h2>Bebidas: do café à cerveja</h2>
+            <p class="meta">
+              Publicado em 20/03/2025 por <strong>Admin</strong>
+            </p>
+            <img src="19.png" alt="Homem bebendo café" />
+            <p>
+              <b>
+                Beber com moderação é arte. Aprenda sobre vinhos, whiskies e
+                cervejas. Do café da manhã ao happy hour, domine o universo das
+                bebidas.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 20
+               ========================================================== -->
+          <article class="post">
+            <h2>Idade: maturidade é poder</h2>
+            <p class="meta">
+              Publicado em 10/03/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="20.png" alt="Homem maduro" />
+            <p>
+              <b>
+                Envelhecer não é declínio. É sabedoria, experiência e charme.
+                Aprenda a envelhecer com estilo, mantendo vitalidade e
+                confiança.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 21
+               ========================================================== -->
+          <article class="post">
+            <h2>Política: cidadão consciente</h2>
+            <p class="meta">
+              Publicado em 01/03/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="21.png" alt="Homem votando" />
+            <p>
+              <b>
+                Participar da política é dever. Informe-se, vote e lute por seus
+                direitos. O macho moderno é cidadão ativo e responsável.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 22
+               ========================================================== -->
+          <article class="post">
+            <h2>Natureza: reconexão essencial</h2>
+            <p class="meta">
+              Publicado em 20/02/2025 por <strong>Admin</strong>
+            </p>
+            <img src="22.png" alt="Homem na natureza" />
+            <p>
+              <b>
+                A natureza cura e renova. Pratique camping, trilhas e observação
+                de aves. Reconecte-se com o mundo natural e encontre paz
+                interior.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 23
+               ========================================================== -->
+          <article class="post">
+            <h2>Tecnologia e inovação</h2>
+            <p class="meta">
+              Publicado em 10/02/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="23.png" alt="Inovação tecnológica" />
+            <p>
+              <b>
+                Este artigo aborda gadgets, inteligência artificial e inovações
+                que impactam a vida do homem moderno, tornando-o mais eficiente
+                e conectado.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 24
+               ========================================================== -->
+          <article class="post">
+            <h2>Fitness: corpo e mente</h2>
+            <p class="meta">
+              Publicado em 01/02/2025 por <strong>Admin</strong>
+            </p>
+            <img src="24.png" alt="Homem se exercitando" />
+            <p>
+              <b>
+                Exercícios físicos fortalecem corpo e mente. Dicas de treino,
+                alimentação e disciplina para manter a saúde e energia em alta.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
+
+          <!-- ==========================================================
+               ARTIGO 25
+               ========================================================== -->
+          <article class="post">
+            <h2>Lazer: aproveitando cada momento</h2>
+            <p class="meta">
+              Publicado em 20/01/2025 por <strong>Equipe</strong>
+            </p>
+            <img src="25.png" alt="Homem se divertindo" />
+            <p>
+              <b>
+                Aprender a relaxar é arte. Do cinema à prática de hobbies,
+                descubra formas de aproveitar a vida sem culpa nem pressa.
+              </b>
+            </p>
+            <a href="#" class="ler-mais">Ler mais...</a>
+          </article>
         </section>
       </section>
-    </main>
 
-    <!-- ===========================
-         SEÇÕES ADICIONAIS
-         Foram introduzidas novas seções de galeria e depoimentos,
-         inexistentes na versão anterior.
-    ============================ -->
-    <div class="containers">
-      <!-- Galeria de fotos, apresentando grid de imagens e legendas -->
-      <section id="galeria">
-        <h2>Galeria de Fotos</h2>
-        <div class="galeria-grid">
-          <!-- Cada .galeria-item possui imagem e texto -->
-          <div class="galeria-item"><img src="gal1.png" alt="Foto 1" /><p>Explorando a natureza</p></div>
-          <!-- ... demais itens seguem o mesmo padrão -->
-        </div>
-      </section>
-
-      <!-- Depoimentos de leitores, adicionados como novo elemento interativo -->
-      <section id="depoimentos">
-        <h2>Depoimentos dos Leitores</h2>
-        <div class="depoimento">
-          <blockquote>"Este blog mudou minha perspectiva [...]"</blockquote>
-          <cite>- João Silva, São Paulo</cite>
-        </div>
-        <!-- Outros depoimentos seguem a mesma estrutura -->
-      </section>
-
-      <!-- ===========================
-           SIDEBAR (BARRA LATERAL)
-           Agora com múltiplos widgets: sobre, categorias, newsletter, Twitter e posts.
-           Antes havia apenas conteúdo estático básico.
-      ============================ -->
+      <!-- ==========================================================
+           SIDEBAR: categorias, posts recentes e newsletter
+           ========================================================== -->
       <aside id="sidebar">
-        <section class="widget sobre-o-blog">
-          <h3>Sobre o Blog</h3>
-          <p>O Blog do Macho é um espaço descontraído [...]</p>
-        </section>
-
-        <section class="widget">
+        <!-- Categorias -->
+        <section class="categorias">
           <h3>Categorias</h3>
           <ul>
             <li><a href="#">Comportamento</a></li>
-            <li><a href="#">Relacionamentos</a></li>
-            <li><a href="#">Estilo de Vida</a></li>
             <li><a href="#">Humor</a></li>
-            <li><a href="#">Carreira</a></li>
+            <li><a href="#">Estilo de Vida</a></li>
+            <li><a href="#">Relacionamentos</a></li>
+            <li><a href="#">Tecnologia</a></li>
           </ul>
         </section>
 
-        <section class="widget">
-          <h3>Newsletter</h3>
-          <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" />
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" />
-            <button type="submit">Assinar</button>
-          </form>
-        </section>
-
-        <section class="widget">
-          <h3>Twitter</h3>
-          <p><em>Widget do Twitter poderia aparecer aqui (exemplo acadêmico).</em></p>
-        </section>
-
-        <!-- Posts recentes e populares adicionados para simular estrutura de blog real -->
-        <section class="widget">
+        <!-- Posts recentes -->
+        <section class="recentes">
           <h3>Posts Recentes</h3>
-          <ul>
-            <li><a href="#">Futuro: visão e planejamento</a></li>
-            <li><a href="#">Voluntariado: dando de volta</a></li>
-            <li><a href="#">Arte: criatividade masculina</a></li>
-            <li><a href="#">Natureza: reconexão essencial</a></li>
-            <li><a href="#">Política: cidadão consciente</a></li>
-          </ul>
-        </section>
-
-        <section class="widget">
-          <h3>Posts Populares</h3>
           <ul>
             <li><a href="#">Manual do Macho Moderno</a></li>
             <li><a href="#">O mito da masculinidade tóxica</a></li>
             <li><a href="#">Moda masculina: menos é mais</a></li>
             <li><a href="#">Relacionamentos sem drama</a></li>
-            <li><a href="#">Humor: a arma secreta do macho</a></li>
           </ul>
         </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+          <h3>Assine a Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Seu e-mail" />
+            <button type="submit">Assinar</button>
+          </form>
+        </section>
       </aside>
-    </div>
 
-    <!-- ===========================
-         RODAPÉ
-         Estrutura revisada com múltiplos blocos:
-         créditos, navegação secundária, redes sociais e vídeo embutido.
-         Estes recursos são novos em relação à Tarefa 6.
-    ============================ -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2025 O Blog do Macho (versão acadêmica). Todos os direitos reservados.</p>
-        <p>Projeto criado apenas para fins de estudo em Engenharia de Computação - FACENS.</p>
-
-        <nav>
-          <ul>
-            <li><a href="#topo">Voltar ao topo</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Sobre</a></li>
-          </ul>
-        </nav>
-
-        <!-- Redes sociais simuladas -->
-        <div class="social-media">
-          <h3>Siga-nos</h3>
-          <ul>
-            <li><a href="#" class="facebook">Facebook</a></li>
-            <li><a href="#" class="twitter">Twitter</a></li>
-            <li><a href="#" class="instagram">Instagram</a></li>
-            <li><a href="#" class="youtube">YouTube</a></li>
-          </ul>
+      <!-- ==========================================================
+           GALERIA DE IMAGENS
+           ========================================================== -->
+      <section id="galeria">
+        <h3>Galeria de Imagens</h3>
+        <div class="imagens">
+          <img src="galeria1.png" alt="Imagem da galeria 1" />
+          <img src="galeria2.png" alt="Imagem da galeria 2" />
+          <img src="galeria3.png" alt="Imagem da galeria 3" />
+          <img src="galeria4.png" alt="Imagem da galeria 4" />
         </div>
+      </section>
 
-        <!-- Novo elemento multimídia: vídeo incorporado -->
-        <div class="video-section">
-          <h3>Vídeo em Destaque</h3>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ZXAeEjI1TvM"
-            title="Serjão Berranteiro - Meme Oficial"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
+      <!-- ==========================================================
+           DEPOIMENTOS
+           ========================================================== -->
+      <section id="depoimentos">
+        <h3>O que dizem nossos leitores</h3>
+        <blockquote>
+          <p>
+            "Finalmente um blog que entende os desafios de ser homem moderno!"
+          </p>
+          <footer>- João Silva</footer>
+        </blockquote>
+        <blockquote>
+          <p>
+            "Conteúdos profundos, mas com uma leitura leve e divertida."
+          </p>
+          <footer>- Pedro Santos</footer>
+        </blockquote>
+      </section>
+    </main>
+
+    <!-- ==========================================================
+         RODAPÉ DO SITE
+         ========================================================== -->
+    <footer id="rodape">
+      <p>
+        &copy; 2025 O Blog do Macho | Todos os direitos reservados | <a
+          href="#">Política de Privacidade</a>
+      </p>
     </footer>
-
-    <!-- Script JavaScript externo adicionado (interatividade introduzida na Atividade 8) -->
-    <script src="script.js"></script>
   </body>
 </html>
-
-<!--
-
-Resumo detalhado das alterações no site (Tarefa 6 → Tarefa 7/8)
-
-Entre a Tarefa 6 e a Tarefa 7/8, o site passou por uma série de melhorias significativas, tanto visuais quanto funcionais,
-
-voltadas a proporcionar uma experiência de navegação mais agradável, intuitiva e interativa para o usuário.
-
-A seguir, detalhamos cada uma das mudanças implementadas, seus objetivos e impactos percebidos.
-
-
-Botão "Voltar ao Topo"
-
-Uma das primeiras alterações notáveis foi a inclusão de um botão dinâmico de retorno ao topo da página.
-
-Diferentemente da Tarefa 6, onde essa função não existia ou era estática, agora o botão só aparece quando o usuário rola a página
-
-para baixo, especificamente após 300 pixels de deslocamento vertical. Essa abordagem garante que o botão não polua visualmente
-
-a interface inicial, aparecendo apenas quando necessário. O botão possui formato circular, cores contrastantes e efeitos de transição
-
-suave, melhorando tanto a estética quanto a usabilidade. A funcionalidade de rolagem suave ao clicar no botão contribui para a experiênci
-
-do usuário, evitando movimentos bruscos e desconfortáveis.
-
-
-Modo Escuro (Dark Mode)
-
-O site passou a contar com um sistema de alternância entre tema claro e escuro. Essa melhoria não apenas adiciona modernidade ao design,
-
-mas também proporciona conforto visual, especialmente em ambientes com pouca iluminação. O botão de alternância foi posicionado
-
-estrategicamente no canto superior direito do header e exibe ícones intuitivos (🌙 para o tema claro e ☀️ para o tema escuro).
-
-Além disso, as cores de fundo e de texto são alteradas dinamicamente, garantindo contraste adequado e legibilidade. Essa funcionalidade
-
-reflete preocupações com acessibilidade e adaptação ao ambiente do usuário, aspectos essenciais para qualquer projeto web contemporâneo.
-
-
-Validação do Formulário de Newsletter
-
-Outra melhoria relevante foi a implementação de validação no formulário de inscrição da newsletter. Na Tarefa 6, o formulário
-
-não apresentava nenhum tipo de verificação de dados, permitindo que informações incompletas ou incorretas fossem enviadas.
-
-Agora, os campos de nome e e-mail são verificados antes do envio, e alertas interativos notificam o usuário sobre possíveis erros.
-
-Inputs com problemas recebem destaque em vermelho, tornando o feedback visual mais claro. Além disso, uma mensagem de confirmação
-
-solicita que o usuário confirme sua inscrição, aumentando a confiabilidade e a sensação de controle sobre o processo.
-
-
-Galeria de Imagens com Modal
-
-A galeria de imagens do site foi aprimorada com a adição de modais. Com essa funcionalidade, ao clicar em qualquer imagem, ela é
-
-exibida em destaque sobre um fundo escuro semitransparente, centralizada e dimensionada proporcionalmente à tela. Essa abordagem melhora
-
-a visualização de detalhes, cria uma experiência imersiva e mantém o usuário focado no conteúdo visual. O modal pode ser fechado
-
-clicando no botão “×” ou em qualquer área fora da imagem, aumentando a facilidade de interação. Essa implementação também contribui
-
-para um design moderno e profissional, refletindo boas práticas de experiência do usuário.
-
-
-Atualização Dinâmica do Ano no Rodapé
-
-Uma melhoria aparentemente simples, mas importante, foi a atualização automática do ano exibido no rodapé. Antes,
-
-esse dado era fixo, exigindo alterações manuais a cada ano. Agora, o site busca o ano corrente dinamicamente, garantindo
-
-que o copyright esteja sempre atualizado e evitando descuidos que possam transmitir impressão de descuido ou desatualização
-
-ao visitante.
-
-
-Barra de Pesquisa Funcional
-
-A barra de pesquisa passou a responder às interações do usuário, mesmo que de forma básica. Ao submeter um termo, o site exibe
-
-um alerta informando qual palavra ou expressão foi pesquisada. Além disso, evita envios de formulários com campos vazios,
-
-oferecendo orientações claras e prevenindo frustrações. Embora a busca completa ainda esteja em desenvolvimento, essa funcionalidade
-
-demonstra progresso no sentido de tornar o site mais interativo e útil.
-
-
-Links "Ler mais..."
-
-Os links de expansão de conteúdo, representados por “Ler mais...”, receberam tratamento semelhante.
-
-Agora, ao serem clicados, exibem um alerta informando que a página completa ainda está em construção. Essa medida
-
-previne frustrações causadas por links quebrados ou incompletos, mantendo a experiência do usuário consistente e comunicando
-
-claramente o estado de desenvolvimento do site.
-
-
-Sticky Header com Sombra
-
-Outra melhoria perceptível está na implementação do sticky header. Ao rolar a página, o header passa a
-
-exibir sombra sutil, criando sensação de profundidade e separação visual entre a área de navegação e o conteúdo.
-
-Esse efeito não só melhora a estética, mas também ajuda na orientação do usuário, mantendo a identidade do site visível
-
-durante a rolagem.
-
-
-Estimativa de Tempo de Leitura dos Posts
-
-Cada artigo passou a exibir uma estimativa de tempo de leitura, calculada automaticamente com base na
-
-quantidade de palavras do texto. Essa funcionalidade orienta o usuário sobre o tempo necessário para consumir o conteúdo,
-
-permitindo melhor planejamento e aumentando a probabilidade de leitura completa dos artigos. Além disso, o indicador é posicionado
-
-estrategicamente antes do link “Ler mais...”, tornando-o visível sem interferir na estética do post.
-
-
-Efeito Typewriter no Título do Blog
-
-Para dar mais dinamismo e destaque ao site, o título principal agora conta com efeito de digitação simulada
-
-(typewriter). Ao carregar a página, as letras aparecem sequencialmente, criando efeito visual atrativo e capturando
-
-a atenção do visitante logo na abertura. Essa funcionalidade, embora estética, agrega valor à experiência inicial do usuário,
-
-transmitindo sensação de modernidade e cuidado com os detalhes.
-
-
-Melhorias Gerais de Interatividade e Código
-
-Todas as funcionalidades implementadas possuem logs no console, permitindo acompanhamento e depuração.
-
-Os estilos e posicionamentos de elementos são ajustados dinamicamente via JavaScript, garantindo consistência
-
-visual e responsividade. O código foi estruturado em funções separadas e claramente comentadas, facilitando manutenção
-
-futura e permitindo expansão do site de maneira organizada e eficiente.
-
-
-Impacto Geral das Alterações
-
-De forma geral, as alterações realizadas entre a Tarefa 6 e a Tarefa 7/8 transformaram o site de um
-
-projeto relativamente estático para uma página interativa, dinâmica e com experiência de usuário aprimorada.
-
-Cada melhoria foi planejada para reforçar acessibilidade, navegabilidade, estética e confiabilidade. O site
-
-agora reflete práticas modernas de desenvolvimento web, demonstrando preocupação com design, usabilidade e qualidade técnica.
-
-
-
-A gestão de versionamento de código é um pilar essencial no desenvolvimento de aplicações web modernas,
-
-especialmente quando se trata de projetos envolvendo linguagens como HTML, CSS e JavaScript. Apesar de poder parecer,
-
-à primeira vista, um detalhe administrativo, o versionamento é, na prática, uma ferramenta estratégica que impacta diretamente
-
-a produtividade, a qualidade do código, a colaboração entre equipes e a manutenção futura do software.
-
-
-Em primeiro lugar, o versionamento de código oferece um registro histórico detalhado de todas as alterações realizadas no projeto.
-
-Cada modificação no HTML, CSS ou JavaScript é documentada, permitindo que os desenvolvedores compreendam exatamente quando e por que
-
-determinada mudança foi realizada. Esse histórico é fundamental para evitar retrabalho e confusões, principalmente em projetos grandes
-
-ou de longa duração. Por exemplo, se uma estilização em CSS causar problemas em diferentes navegadores, é possível retornar rapidamente
-
-a uma versão anterior estável, sem necessidade de reescrever linhas de código ou tentar adivinhar qual alteração gerou o erro.
-
-Esse controle de alterações reduz significativamente o risco de falhas, garantindo que o site permaneça funcional e consistente para o
-
-usuário final.
-
-
-Além disso, uma boa gestão de versionamento facilita a colaboração entre múltiplos desenvolvedores. Em equipes que
-
-trabalham simultaneamente no mesmo projeto, é comum que duas ou mais pessoas alterem arquivos HTML, CSS ou scripts
-
-JavaScript ao mesmo tempo. Sem uma estratégia de versionamento eficiente, essas alterações podem se sobrepor ou entrar
-
-em conflito, gerando erros difíceis de rastrear. Ferramentas de versionamento como Git permitem que cada desenvolvedor
-
-trabalhe em uma branch separada, integrando mudanças apenas quando elas estiverem testadas e aprovadas. Esse fluxo de trabalho
-
-reduz conflitos, aumenta a previsibilidade do desenvolvimento e promove uma integração contínua mais segura e eficiente.
-
-
-Do ponto de vista da qualidade do software, o versionamento também possibilita a implementação de boas práticas de desenvolvimento,
-
-como code review e testes automatizados. Cada commit, ou registro de alteração, pode ser revisado por outros membros da equipe,
-
-garantindo que novas funcionalidades ou ajustes no CSS e JavaScript sigam padrões de codificação consistentes. Além disso,
-
-integrações contínuas podem ser configuradas para verificar automaticamente se alterações no código quebram funcionalidades
-
-existentes, o que é especialmente importante em sites dinâmicos onde pequenos erros de JavaScript podem comprometer interações
-
-completas do usuário. Esse controle sistemático aumenta a confiabilidade da aplicação e reduz a incidência de bugs em produção.
-
-
-Outro impacto positivo relevante está relacionado à manutenção e evolução do projeto ao longo do tempo. Sites web não são estáticos;
-
-eles necessitam de atualizações constantes, seja para adicionar novas funcionalidades, otimizar desempenho ou corrigir vulnerabilidades
-
-de segurança. Um bom versionamento permite que essas mudanças sejam realizadas de maneira incremental, rastreável e reversível.
-
-Isso significa que futuras equipes de desenvolvimento ou mesmo o próprio autor original poderão entender rapidamente a lógica
-
-de alterações passadas, reduzir o tempo de diagnóstico de problemas e implementar melhorias de forma mais ágil e segura.
-
-
-Além dos aspectos técnicos, a gestão de versionamento contribui para uma cultura organizacional mais organizada e profissional.
-
-Equipes que adotam versionamento rigoroso desenvolvem disciplina no registro de alterações, criação de commits claros e detalhados
-
-e planejamento de integrações. Essa disciplina se traduz em documentação natural do projeto, facilitando treinamentos, onboarding
-
-de novos desenvolvedores e comunicação com stakeholders, mesmo em projetos aparentemente simples de HTML, CSS e JavaScript.
-
-
-Por fim, é importante destacar que o versionamento não só previne problemas, como também potencializa a inovação.
-
-Desenvolvedores podem experimentar novas soluções, testar frameworks, ajustar layouts ou refatorar scripts com a
-
-segurança de que poderão reverter alterações indesejadas. Essa liberdade de experimentação é crucial para o desenvolvimento
-
-de aplicações web modernas, onde a estética, a experiência do usuário e a performance técnica são fatores diretamente interligados.
-
-
-Em resumo, uma boa gestão de versionamento de código impacta positivamente todos os aspectos do desenvolvimento de
-
-aplicações web. Ela garante histórico de alterações, facilita a colaboração, aumenta a qualidade e confiabilidade do código,
-
-simplifica a manutenção futura, promove disciplina organizacional e abre espaço para inovação. Projetos que adotam práticas
-
-de versionamento robustas não apenas entregam resultados mais consistentes e seguros, mas também criam um ambiente propício para
-
-crescimento contínuo da equipe e evolução tecnológica do software. Em um mundo cada vez mais digital, negligenciar o
-
-versionamento significa abrir mão de eficiência, controle e previsibilidade — elementos essenciais para o sucesso de qualquer
-
-aplicação web.
-
-
-Além do avanço técnico, a experiência reforçou a importância do trabalho
-
-colaborativo com o uso de ferramentas de versionamento, documentação e testes.
-
-Realizar duas atividades com o mesmo prazo de entrega de uma apenas uma
-
-atividade favoreceu o desenvolvimento de soluções criativas como o uso de um
-
-projeto criado anteriormente como base e a inovação na divisão do grupo.
-
-Também houve maior uso das ferramentas de colaboração disponibilizadas
-
-pelo GitHub, que auxiliaram no desenvolvimento completo do site e nas revisões e
-
-comentários de código.
-
-
-
-No gerenciamento do grupo:
-
-Ana foi responsável pelas atualizações referentes ao tópico 2.3;
-
-Gabriel foi responsável pelas atualizações referentes ao tópico 2.2;
-
-Gustavo foi responsável pelas atualizações referentes ao tópico 2.4;
-
-Jonathan foi responsável por auxiliar na organização dos tópicos, redação do
-
-relatório e revisar/comentar o projeto.
-
-E Roni ficou responsável pela criação do projeto no GitHub, e pelas
-
-atualizações referentes ao tópico 2.1.
-
-
--->
-<!-- Projeto finalizado em 2025 -->

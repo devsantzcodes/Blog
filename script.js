@@ -1,22 +1,21 @@
 /*
   Arquivo: script.js
   Projeto: O Blog do Macho (Versão Acadêmica)
-  Descrição: Contém toda a lógica de programação e interatividade
-             do blog, manipulando DOM, respondendo a eventos do usuário
-             e adicionando funcionalidades dinâmicas à página.
+  Descrição: Este arquivo contém toda a lógica de programação e interatividade
+             do blog. Ele é responsável por manipular o DOM, responder a eventos
+             do usuário e adicionar funcionalidades dinâmicas à página.
 */
 
 // ===================================================================================
 // INICIALIZAÇÃO
-// O script só é executado após o carregamento completo do DOM, garantindo que
-// todos os elementos estejam disponíveis para manipulação.
+// Garante que o script só será executado após o carregamento completo do HTML.
 // ===================================================================================
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM carregado. Iniciando scripts do Blog do Macho.");
 
   // ===================================================================================
   // SELETORES DE ELEMENTOS
-  // Guardam referências a elementos do DOM para facilitar o acesso e melhorar a performance.
+  // Armazena os elementos do DOM em variáveis para fácil acesso e melhor performance.
   // ===================================================================================
   const newsletterForm = document.querySelector(".widget form");
   const newsletterNameInput = document.getElementById("nome");
@@ -29,18 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerCopyright = document.querySelector("footer .container p");
 
   // ===================================================================================
-  // FUNCIONALIDADES BASE
-  // Funcionalidades fundamentais aprendidas nas aulas e utilizadas no blog
+  // FUNCIONALIDADES BASE (EXEMPLOS DA AULA)
   // ===================================================================================
 
-  // 1. Botão "Voltar ao Topo"
+  // 1. Botão "Voltar ao Topo" Dinâmico
+  // Cria e gerencia um botão que aparece quando o usuário rola a página.
+  // -----------------------------------------------------------------------------------
   function setupBackToTopButton() {
+    // Cria o botão dinamicamente
     const backToTopButton = document.createElement("button");
     backToTopButton.innerText = "↑";
     backToTopButton.id = "back-to-top";
     document.body.appendChild(backToTopButton);
 
-    // Estilo do botão
+    // Adiciona o estilo para o botão
     backToTopButton.style.position = "fixed";
     backToTopButton.style.bottom = "20px";
     backToTopButton.style.right = "20px";
@@ -52,20 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
     backToTopButton.style.height = "50px";
     backToTopButton.style.fontSize = "24px";
     backToTopButton.style.cursor = "pointer";
-    backToTopButton.style.display = "none"; // Inicialmente oculto
+    backToTopButton.style.display = "none"; // Começa oculto
     backToTopButton.style.zIndex = "1000";
     backToTopButton.style.transition = "opacity 0.3s, visibility 0.3s";
 
-    // Mostrar botão após rolagem de 300px
+    // Lógica para mostrar/ocultar o botão
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
+        // Mostra após rolar 300px
         backToTopButton.style.display = "block";
       } else {
         backToTopButton.style.display = "none";
       }
     });
 
-    // Rola suavemente para o topo ao clicar
+    // Lógica para rolar suavemente para o topo
     backToTopButton.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
@@ -76,14 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Voltar ao Topo' iniciada.");
   }
 
-  // 2. Alternar Modo Escuro (Dark Mode)
+  // 2. Modo Escuro (Dark Mode)
+  // Adiciona um botão para alternar entre os temas claro e escuro.
+  // -----------------------------------------------------------------------------------
   function setupDarkModeToggle() {
     const toggleButton = document.createElement("button");
     toggleButton.innerText = "🌙";
     toggleButton.id = "dark-mode-toggle";
-    document.querySelector("header .container").appendChild(toggleButton);
+    document.querySelector("header .container").appendChild(toggleButton); // Adiciona ao header
 
-    // Estilo do botão
+    // Estilos do botão de toggle
     toggleButton.style.position = "absolute";
     toggleButton.style.top = "20px";
     toggleButton.style.right = "20px";
@@ -96,11 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.style.fontSize = "20px";
     toggleButton.style.cursor = "pointer";
 
-    // Alterna a classe dark-mode no body
     toggleButton.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
 
-      // Atualiza ícone e cores do botão
+      // Atualiza o ícone do botão
       if (document.body.classList.contains("dark-mode")) {
         toggleButton.innerText = "☀️";
         toggleButton.style.backgroundColor = "#333";
@@ -116,22 +119,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 3. Validação do Formulário de Newsletter
+  // Verifica se os campos de nome e e-mail estão preenchidos corretamente.
+  // -----------------------------------------------------------------------------------
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", function (event) {
-      event.preventDefault(); // Impede envio real
+      event.preventDefault(); // Impede o envio real do formulário
       let isValid = true;
 
-      // Reset de bordas de erro
+      // Limpa estilos de erro anteriores
       newsletterNameInput.style.border = "1px solid #ccc";
       newsletterEmailInput.style.border = "1px solid #ccc";
 
-      // Valida nome
+      // Validação do nome
       if (newsletterNameInput.value.trim() === "") {
         alert("Por favor, preencha o campo Nome.");
         newsletterNameInput.style.border = "2px solid red";
         isValid = false;
       }
-      // Valida e-mail
+      // Validação do e-mail
       else if (
         !newsletterEmailInput.value.includes("@") ||
         newsletterEmailInput.value.trim().length < 5
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isValid = false;
       }
 
-      // Se válido, confirma inscrição
+      // Se tudo estiver válido, exibe uma mensagem de sucesso
       if (isValid) {
         if (
           confirm(
@@ -152,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(
             `Inscrição na newsletter: ${newsletterNameInput.value}, ${newsletterEmailInput.value}`
           );
-          newsletterForm.reset();
+          newsletterForm.reset(); // Limpa o formulário
         } else {
           console.log("Inscrição cancelada pelo usuário.");
         }
@@ -163,8 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Validação de Newsletter' iniciada.");
   }
 
-  // 4. Galeria de Imagens com Modal
+  // 4. Galeria de Imagens Interativa (Modal)
+  // Abre uma imagem da galeria em um modal ao ser clicada.
+  // -----------------------------------------------------------------------------------
   function setupImageModal() {
+    // Cria a estrutura do modal dinamicamente
     const modal = document.createElement("div");
     modal.id = "image-modal";
     modal.innerHTML = `
@@ -173,6 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(modal);
 
+    // Estilos do Modal
     modal.style.display = "none";
     modal.style.position = "fixed";
     modal.style.zIndex = "2000";
@@ -187,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalImg = document.getElementById("modal-img");
     const closeBtn = modal.querySelector(".close-modal-btn");
 
+    // Estilos do conteúdo do modal e botão de fechar
     modalImg.style.margin = "auto";
     modalImg.style.display = "block";
     modalImg.style.maxWidth = "80%";
@@ -210,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Função para fechar o modal
     const closeModal = () => {
       modal.style.display = "none";
       console.log("Modal de imagem fechado.");
@@ -217,13 +228,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn.addEventListener("click", closeModal);
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
+      if (e.target === modal) {
+        // Fecha se clicar no fundo
+        closeModal();
+      }
     });
 
     console.log("Funcionalidade 'Galeria Modal' iniciada.");
   }
 
   // 5. Atualização Dinâmica do Ano no Rodapé
+  // Garante que o ano no copyright seja sempre o ano atual.
+  // -----------------------------------------------------------------------------------
   if (footerCopyright) {
     footerCopyright.textContent = footerCopyright.textContent.replace(
       "2025",
@@ -232,7 +248,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Ano do rodapé atualizado para o ano corrente.");
   }
 
-  // 6. Barra de Pesquisa
+  // ===================================================================================
+  // FUNCIONALIDADES EXTRAS
+  // ===================================================================================
+
+  // 6. Manipulador para a Barra de Pesquisa
+  // Exibe um alerta com o termo pesquisado.
+  // -----------------------------------------------------------------------------------
   if (searchForm) {
     searchForm.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -250,7 +272,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Barra de Pesquisa' iniciada.");
   }
 
-  // 7. Alerta para links "Ler mais..."
+  // 7. Alerta para Links "Ler mais..."
+  // Simula uma funcionalidade em desenvolvimento ao clicar nos links.
+  // -----------------------------------------------------------------------------------
   readMoreLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
@@ -261,7 +285,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 8. Sticky Header
+  // 8. Efeito de "Sticky Header" ao Rolar
+  // Adiciona uma sombra ao header quando o usuário rola a página.
+  // -----------------------------------------------------------------------------------
   function setupStickyHeader() {
     const header = document.querySelector("header");
     header.style.transition = "box-shadow 0.3s ease";
@@ -275,9 +301,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Sticky Header' iniciada.");
   }
 
-  // 9. Tempo de Leitura dos Artigos
+  // 9. Cálculo do Tempo de Leitura dos Artigos
+  // Adiciona dinamicamente uma estimativa de tempo de leitura para cada post.
+  // -----------------------------------------------------------------------------------
   function calculateReadingTime() {
-    const wordsPerMinute = 200;
+    const wordsPerMinute = 200; // Média de palavras lidas por minuto
     posts.forEach((post) => {
       const text = post.querySelector("p:not(.meta)").textContent;
       const wordCount = text.split(/\s+/).length;
@@ -295,7 +323,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Tempo de Leitura' iniciada.");
   }
 
-  // 10. Efeito Typewriter no Título do Blog
+  // 10. Efeito de Digitação no Título do Blog (Typewriter)
+  // Anima o título principal do blog como se estivesse sendo digitado.
+  // -----------------------------------------------------------------------------------
   function typewriterEffect() {
     const titleElement = document.querySelector("header h1");
     const originalTitle = titleElement.textContent;
@@ -306,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (i < originalTitle.length) {
         titleElement.textContent += originalTitle.charAt(i);
         i++;
-        setTimeout(type, 150);
+        setTimeout(type, 150); // Velocidade da digitação
       }
     }
     type();
@@ -315,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===================================================================================
   // CHAMADA DAS FUNÇÕES
+  // Executa todas as funções de inicialização.
   // ===================================================================================
   setupBackToTopButton();
   setupDarkModeToggle();
@@ -322,6 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupStickyHeader();
   calculateReadingTime();
   typewriterEffect();
-}); // Fim do DOMContentLoaded
+}); // Fim do 'DOMContentLoaded'
 
 // Fim do arquivo script.js

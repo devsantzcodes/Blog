@@ -1,15 +1,20 @@
 /* ===============================
    style.css - Blog 
    Estilo simples e tradicional
+   Arquivo atualizado para a Tarefa 07/08.
+   Inclui melhorias visuais e ajustes para 'Sobre o Blog', dark mode e responsividade.
    =============================== */
 
 /* --------- RESET BÁSICO --------- */
+/* Remove margens/padding padrões e define box-sizing para consistência no layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* --------- BODY --------- */
+/* Define fonte padrão, cor de fundo, cor do texto e tamanho da linha */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
@@ -19,41 +24,49 @@ body {
 }
 
 /* --------- CONTAINER PRINCIPAL --------- */
+/* Centraliza conteúdo, define largura máxima e altura, bordas arredondadas e layout flex */
 .container {
   width: 80%;
-  height:70%;
-  border-radius:20px;
+  height: 70%;
+  border-radius: 20px;
   max-width: 1100px;
   margin: auto;
 
-  display: flex;
-  flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
 /* --------- HEADER --------- */
+/* Define cor de fundo, cor do texto, padding e margem inferior do cabeçalho */
 header {
   background: #222;
   color: #fff;
   padding: 20px;
   margin-bottom: 20px;
+  position: relative; /* Para elementos absolutos dentro do header */
+  display: flex; /* Layout flex para centralizar título e menu */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre elementos */
 }
 
+/* Título principal do blog */
 header h1 {
   font-size: 2rem;
   text-align: center;
 }
 
+/* Subtítulo/tagline */
 header p {
   text-align: center;
   font-size: 0.9rem;
 }
 
 /* --------- NAVEGAÇÃO --------- */
+/* Menu principal centralizado, com lista horizontal e espaçamento */
 nav {
   margin-top: 15px;
   text-align: center;
@@ -63,17 +76,16 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 5px 15px;
+  gap: 25px; /* Espaço entre os itens do menu */
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  transition: color 0.3s ease; /* Transição suave para hover */
 }
 
 nav ul li a:hover {
@@ -81,41 +93,59 @@ nav ul li a:hover {
 }
 
 /* --------- LAYOUT PRINCIPAL --------- */
+/* Layout de posts e sidebar usando flexbox */
 main {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px; /* Espaçamento entre posts e sidebar */
 }
 
 /* --------- POSTS --------- */
+/* Área dos artigos, ocupa 3x a largura da sidebar */
 .posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   flex: 3;
 }
 
+/* Cada post individual */
 .post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 30px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
+  transition: background 0.3s ease; /* Efeito hover */
 }
 
+/* Imagens dentro dos posts */
 .post img {
   max-width: 50%;
   height: auto;
   display: block;
   margin-bottom: 10px;
+  border-radius: 3px; /* Cantos arredondados */
 }
 
+/* Título do post */
 .post h2 {
   color: #222;
   margin-bottom: 10px;
   font-size: 1.4rem;
 }
 
+/* Texto do post */
 .post p {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
+/* Link 'ler mais' */
 .read-more {
   display: inline-block;
   color: #0066cc;
@@ -127,13 +157,29 @@ main {
   text-decoration: underline;
 }
 
+/* Hover nos posts para efeito visual */
+.post:hover {
+  background: #fafafa;
+}
+
 /* --------- SIDEBAR --------- */
+/* Área lateral com widgets */
 aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px;
   flex: 1;
   background: #f5f5f5;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+aside:hover {
+  background: #eee; /* Destaque leve ao passar o mouse */
 }
 
 aside h3 {
@@ -143,13 +189,10 @@ aside h3 {
   padding-bottom: 5px;
 }
 
+/* Lista de links na sidebar */
 aside ul {
   list-style: none;
   margin-bottom: 15px;
-}
-
-aside ul li {
-  margin: 5px 0;
 }
 
 aside ul li a {
@@ -164,7 +207,9 @@ aside ul li a:hover {
 /* --------- FORMULÁRIO NEWSLETTER --------- */
 form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -182,15 +227,26 @@ form button {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
   background: #004999;
 }
 
+/* Inputs em foco recebem contorno azul */
+input:focus {
+  outline: 2px solid #0066cc;
+}
+
 /* --------- FOOTER --------- */
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 20px;
   padding: 20px;
   background: #222;
@@ -201,7 +257,6 @@ footer {
 
 footer a {
   color: #ccc;
-  text-decoration: none;
 }
 
 footer a:hover {
@@ -209,58 +264,27 @@ footer a:hover {
 }
 
 /* --------- RESPONSIVIDADE --------- */
+/* Ajustes para telas menores que 900px */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .posts, aside {
+    width: 100%;
   }
 
   nav ul {
     flex-direction: column;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  footer {
+    flex-direction: column;
   }
 }
 
-/* --------- DETALHES ADICIONAIS --------- */
-
-/* Links */
-a {
-  transition: color 0.3s ease;
-}
-
-/* Imagens arredondadas */
-.post img {
-  border-radius: 3px;
-}
-
-/* Efeito leve em hover nos posts */
-.post:hover {
-  background: #fafafa;
-  transition: background 0.3s ease;
-}
-
-/* Sidebar destaque */
-aside {
-  transition: background 0.3s ease;
-}
-
-aside:hover {
-  background: #eee;
-}
-
-/* Inputs foco */
-input:focus {
-  outline: 2px solid #0066cc;
-}
-
-/* Botões arredondados */
-button {
-  border-radius: 5px;
-}
-
-/* Rodapé fixo em telas pequenas (extra) */
+/* Ajustes para telas menores que 500px */
 @media (max-width: 500px) {
   footer {
     position: relative;
@@ -269,7 +293,8 @@ button {
   }
 }
 
-/* NOVO estilo moderno para 'Sobre o Blog' */
+/* --------- WIDGET 'SOBRE O BLOG' --------- */
+/* Estilo moderno, destaque visual com gradiente e sombra */
 .widget.sobre-o-blog {
   background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
   padding: 25px 20px;
@@ -282,10 +307,10 @@ button {
 }
 
 .widget.sobre-o-blog:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* Leve elevação ao passar o mouse */
 }
 
-/* Título com ícone */
+/* Título do widget com ícone emoji */
 .widget.sobre-o-blog h3 {
   font-size: 1.4rem;
   color: #00bfff;
@@ -297,13 +322,12 @@ button {
   padding-bottom: 8px;
 }
 
-/* Ícone do título */
 .widget.sobre-o-blog h3::before {
-  content: "🧔"; /* ícone emoji (pode trocar por outro ou remover) */
+  content: "🧔"; /* Emoji representando o tema masculino */
   font-size: 1.5rem;
 }
 
-/* Texto */
+/* Texto do widget alinhado e cor suave */
 .widget.sobre-o-blog p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -311,8 +335,8 @@ button {
   color: #ccc;
 }
 
-
-/* Dark Mode Styles */
+/* --------- DARK MODE --------- */
+/* Estilo alternativo com fundo escuro e cores adaptadas */
 body.dark-mode {
   background-color: #333;
   color: #fff;
@@ -320,7 +344,6 @@ body.dark-mode {
 
 body.dark-mode header {
   background: #111;
-  color: #fff;
 }
 
 body.dark-mode nav ul li a {
@@ -373,137 +396,4 @@ body.dark-mode .search-form button {
 
 body.dark-mode .search-form input::placeholder {
   color: #ccc;
-}
-
-/* Header positioning for absolute elements */
-header {
-  position: relative;
-
-/* ======= LAYOUT FLEXBOX ======= */
-
-/* Header centralizado */
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Menu organizado */
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Layout principal */
-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* ======= LAYOUT FLEXBOX  ======= */
-
-/* --- Header centralizado e organizado --- */
-header {
-  display: flex;
-  flex-direction: column; /* título e subtítulo empilhados */
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* --- Navegação (menu) --- */
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-/* --- Área principal (posts + sidebar) --- */
-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-/* --- Sessão dos posts --- */
-.posts {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 3; /* ocupa 3x o tamanho da sidebar */
-}
-
-/* Cada post interno */
-.post {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-/* --- Sidebar organizada verticalmente --- */
-aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 20px;
-  flex: 1; /* menor que a área de posts */
-}
-
-/* --- Newsletter e widgets alinhados --- */
-.widget {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* --- Rodapé centralizado --- */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* --- Formulário com alinhamento flex --- */
-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* --- Responsividade (telas pequenas) --- */
-@media (max-width: 900px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .posts, aside {
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  footer {
-    flex-direction: column;
-  }
 }

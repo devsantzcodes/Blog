@@ -53,6 +53,35 @@ header p {
   font-size: 0.9rem;
 }
 
+/* Botão de alternância de modo escuro/claro */
+#dark-mode-toggle {
+  position: absolute;
+  top: 15px;          /* distância do topo do header */
+  right: 20px;        /* distância da direita do header */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  color: #222;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+/* Ajuste do header para posicionamento relativo */
+header .containers {
+  position: relative; /* necessário para que o botão absoluto fique dentro do header */
+}
+
 /* --------- NAVEGAÇÃO --------- */
 nav {
   margin-top: 15px;

@@ -1,228 +1,619 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <!-- Cabeçalho do documento HTML.
-         Inclui metadados essenciais para SEO e compartilhamento em redes sociais (Open Graph).
-         Esta parte foi ampliada em relação à Tarefa 6, com novas meta tags, palavras-chave e descrições. -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="O Blog do Macho: espaço masculino sobre comportamento, humor, opinião e estilo de vida. Artigos sobre masculinidade moderna, relacionamentos e muito mais."
-    />
-    <meta
-      name="keywords"
-      content="blog, macho, masculinidade, comportamento, humor, estilo de vida, relacionamentos"
-    />
-    <meta name="author" content="Equipe do Blog do Macho" />
-    <meta property="og:title" content="O Blog do Macho" />
-    <meta
-      property="og:description"
-      content="Um espaço masculino sobre comportamento, humor e opinião."
-    />
-    <meta property="og:image" content="https://example.com/og-image.png" />
-    <meta property="og:url" content="https://example.com/blog" />
-    <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="style.css" />
-    <title>O Blog do Macho - Comportamento, Humor e Opinião</title>
-  </head>
 
-  <body>
-    <!-- ===========================
-         CABEÇALHO PRINCIPAL
-         Agora contém título, menu de navegação e barra de pesquisa.
-         A Tarefa 6 possuía apenas o título e menu básico; esta versão adiciona a tagline e o campo de busca.
-    ============================ -->
-    <header id="topo">
-      <div class="containers">
-        <h1>O Blog do Macho</h1>
-        <p class="tagline">
-          Um espaço masculino sobre comportamento, humor e opinião.
-        </p>
 
-        <!-- Menu principal expandido -->
-        <nav>
-          <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Artigos</a></li>
-            <li><a href="#">Estilo de Vida</a></li>
-            <li><a href="#">Relacionamentos</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
+  <head>
+        <meta
+      charset="UTF-8"
+    />
 
-        <!-- Novo elemento: barra de pesquisa -->
-        <form class="search-form">
-          <input type="text" placeholder="Buscar no blog..." />
-          <button type="submit">Buscar</button>
-        </form>
-      </div>
-    </header>
 
-    <!-- ===========================
-         CONTEÚDO PRINCIPAL
-         Estrutura ampliada — o site agora apresenta 25 artigos organizados em seções.
-         Na Tarefa 6, existiam apenas artigos de demonstração; aqui foi aplicado conteúdo temático completo.
-    ============================ -->
-    <main class="container">
-      <section id="conteudo-principal">
-        <section class="posts">
-          <!-- Cada bloco <article> representa uma postagem.
-               Foram criados 25 posts, cada um com título, data, imagem e resumo. -->
-          <!-- A seguir, exemplos representativos (os demais seguem o mesmo padrão): -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-          <article class="post">
-            <h2>Manual do Macho Moderno</h2>
-            <p class="meta">Publicado em 01/10/2025 por <strong>Admin</strong></p>
-            <img src="1.png" alt="Homem pensativo" />
-            <p><b>Ser homem no século XXI [...]</b></p>
-            <a href="#" class="ler-mais">Ler mais...</a>
-          </article>
 
-          <!-- ... demais 24 artigos seguem o mesmo modelo.
-               Esta expansão é uma das maiores evoluções desde a Tarefa 6, que tinha estrutura limitada. -->
-        </section>
-      </section>
-    </main>
+        <meta
+      name="description"
+      content="O Blog do Macho: espaço masculino sobre comportamento, humor, opinião e estilo de vida. Artigos sobre masculinidade moderna, relacionamentos e muito mais."
+    />
 
-    <!-- ===========================
-         SEÇÕES ADICIONAIS
-         Foram introduzidas novas seções de galeria e depoimentos,
-         inexistentes na versão anterior.
-    ============================ -->
-    <div class="containers">
-      <!-- Galeria de fotos, apresentando grid de imagens e legendas -->
-      <section id="galeria">
-        <h2>Galeria de Fotos</h2>
-        <div class="galeria-grid">
-          <!-- Cada .galeria-item possui imagem e texto -->
-          <div class="galeria-item"><img src="gal1.png" alt="Foto 1" /><p>Explorando a natureza</p></div>
-          <!-- ... demais itens seguem o mesmo padrão -->
-        </div>
-      </section>
 
-      <!-- Depoimentos de leitores, adicionados como novo elemento interativo -->
-      <section id="depoimentos">
-        <h2>Depoimentos dos Leitores</h2>
-        <div class="depoimento">
-          <blockquote>"Este blog mudou minha perspectiva [...]"</blockquote>
-          <cite>- João Silva, São Paulo</cite>
-        </div>
-        <!-- Outros depoimentos seguem a mesma estrutura -->
-      </section>
+        <meta
+      name="keywords"
+      content="blog, macho, masculinidade, comportamento, humor, estilo de vida, relacionamentos, opinião, moderna, carreira, fitness"
+    />
 
-      <!-- ===========================
-           SIDEBAR (BARRA LATERAL)
-           Agora com múltiplos widgets: sobre, categorias, newsletter, Twitter e posts.
-           Antes havia apenas conteúdo estático básico.
-      ============================ -->
-      <aside id="sidebar">
-        <section class="widget sobre-o-blog">
-          <h3>Sobre o Blog</h3>
-          <p>O Blog do Macho é um espaço descontraído [...]</p>
-        </section>
 
-        <section class="widget">
-          <h3>Categorias</h3>
-          <ul>
-            <li><a href="#">Comportamento</a></li>
-            <li><a href="#">Relacionamentos</a></li>
-            <li><a href="#">Estilo de Vida</a></li>
-            <li><a href="#">Humor</a></li>
-            <li><a href="#">Carreira</a></li>
-          </ul>
-        </section>
+        <meta
+      name="author"
+      content="Equipe de Desenvolvimento do Blog do Macho"
+    />
 
-        <section class="widget">
-          <h3>Newsletter</h3>
-          <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" />
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" />
-            <button type="submit">Assinar</button>
-          </form>
-        </section>
 
-        <section class="widget">
-          <h3>Twitter</h3>
-          <p><em>Widget do Twitter poderia aparecer aqui (exemplo acadêmico).</em></p>
-        </section>
+        <meta
+      property="og:title"
+      content="O Blog do Macho - Conteúdo Exclusivo"
+    />
 
-        <!-- Posts recentes e populares adicionados para simular estrutura de blog real -->
-        <section class="widget">
-          <h3>Posts Recentes</h3>
-          <ul>
-            <li><a href="#">Futuro: visão e planejamento</a></li>
-            <li><a href="#">Voluntariado: dando de volta</a></li>
-            <li><a href="#">Arte: criatividade masculina</a></li>
-            <li><a href="#">Natureza: reconexão essencial</a></li>
-            <li><a href="#">Política: cidadão consciente</a></li>
-          </ul>
-        </section>
 
-        <section class="widget">
-          <h3>Posts Populares</h3>
-          <ul>
-            <li><a href="#">Manual do Macho Moderno</a></li>
-            <li><a href="#">O mito da masculinidade tóxica</a></li>
-            <li><a href="#">Moda masculina: menos é mais</a></li>
-            <li><a href="#">Relacionamentos sem drama</a></li>
-            <li><a href="#">Humor: a arma secreta do macho</a></li>
-          </ul>
-        </section>
-      </aside>
-    </div>
+    <meta
+      property="og:description"
+      content="Um espaço masculino sobre comportamento, humor, opinião e desenvolvimento pessoal. Confira agora!"
+    />
 
-    <!-- ===========================
-         RODAPÉ
-         Estrutura revisada com múltiplos blocos:
-         créditos, navegação secundária, redes sociais e vídeo embutido.
-         Estes recursos são novos em relação à Tarefa 6.
-    ============================ -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2025 O Blog do Macho (versão acadêmica). Todos os direitos reservados.</p>
-        <p>Projeto criado apenas para fins de estudo em Engenharia de Computação - FACENS.</p>
 
-        <nav>
-          <ul>
-            <li><a href="#topo">Voltar ao topo</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Sobre</a></li>
-          </ul>
-        </nav>
+    <meta
+      property="og:image"
+      content="https://example.com/assets/images/og-image-v2.png"
+    />
 
-        <!-- Redes sociais simuladas -->
-        <div class="social-media">
-          <h3>Siga-nos</h3>
-          <ul>
-            <li><a href="#" class="facebook">Facebook</a></li>
-            <li><a href="#" class="twitter">Twitter</a></li>
-            <li><a href="#" class="instagram">Instagram</a></li>
-            <li><a href="#" class="youtube">YouTube</a></li>
-          </ul>
-        </div>
 
-        <!-- Novo elemento multimídia: vídeo incorporado -->
-        <div class="video-section">
-          <h3>Vídeo em Destaque</h3>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ZXAeEjI1TvM"
-            title="Serjão Berranteiro - Meme Oficial"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </footer>
+    <meta
+      property="og:url"
+      content="https://example.com/blog-v8"
+    />
 
-    <!-- Script JavaScript externo adicionado (interatividade introduzida na Atividade 8) -->
-    <script src="script.js"></script>
-  </body>
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+
+        <link
+      rel="stylesheet"
+      href="style.css"
+    />
+
+
+        <title>O Blog do Macho - Comportamento, Humor e Opinião (Versão 8.0)</title>
+
+
+  </head>
+
+
+  <body>
+
+
+        <header
+      id="topo"
+    >
+
+
+            <div
+        class="containers"
+      >
+
+
+        <h1>O Blog do Macho</h1>
+
+
+        <p
+          class="tagline"
+        >
+          Um espaço masculino sobre comportamento, humor e opinião.
+        </p>
+
+
+                <nav>
+
+
+          <ul>
+            <li>
+              <a
+                href="#"
+              >
+                Início
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+              >
+                Artigos
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+              >
+                Estilo de Vida
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+              >
+                Relacionamentos
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+              >
+                Contato
+              </a>
+            </li>
+          </ul>
+
+
+        </nav>
+                        <form
+          class="search-form"
+        >
+
+
+          <input
+            type="text"
+            placeholder="Buscar no blog..."
+          />
+
+
+          <button
+            type="submit"
+          >
+            Buscar
+          </button>
+
+
+        </form>
+              </div>
+          </header>
+
+
+        <main
+      class="container"
+    >
+
+
+      <section
+        id="conteudo-principal"
+      >
+
+
+                <section
+          class="posts"
+        >
+
+
+                    <article
+            class="post"
+          >
+
+
+            <h2>Manual do Macho Moderno: Revisitando os Conceitos</h2>
+
+
+            <p
+              class="meta"
+            >
+              Publicado em 01/10/2025 por
+              <strong>Admin do Blog</strong>
+            </p>
+
+
+                        <img
+              src="1.png"
+              alt="Homem pensativo em ambiente moderno"
+            />
+
+
+            <p>
+              <b>Ser homem no século XXI</b> exige mais do que força; requer inteligência, emoção e adaptabilidade.
+              Saiba como equilibrar tradição e modernidade.
+            </p>
+
+
+            <a
+              href="#"
+              class="ler-mais"
+            >
+              Ler mais e comentar...
+            </a>
+
+
+          </article>
+                                      </section>
+              </section>
+          </main>
+            <div
+      class="containers"
+    >
+
+
+            <section
+        id="galeria"
+      >
+
+
+        <h2>Galeria de Fotos do Macho Alpha</h2>
+
+
+        <div
+          class="galeria-grid"
+        >
+
+
+                    <div
+            class="galeria-item"
+          >
+            <img
+              src="gal1.png"
+              alt="Foto de um homem explorando a natureza"
+            />
+            <p>Explorando a natureza com propósito</p>
+          </div>
+                            </div>
+      </section>
+                  <section
+        id="depoimentos"
+      >
+
+
+        <h2>Depoimentos dos Leitores Satisfeitos</h2>
+
+
+        <div
+          class="depoimento"
+        >
+          <blockquote>"Este blog mudou minha perspectiva de vida e relacionamento. Conteúdo de qualidade!"</blockquote>
+          <cite>- João Silva, Leitor Fiel de São Paulo</cite>
+        </div>
+              </section>
+                  <aside
+        id="sidebar"
+      >
+
+
+                <section
+          class="widget sobre-o-blog"
+        >
+          <h3>Sobre o Blog do Macho</h3>
+          <p>O Blog do Macho é um espaço descontraído, mas com profundidade, dedicado ao homem moderno que busca autodesenvolvimento e informação relevante.</p>
+        </section>
+
+
+                <section
+          class="widget categorias"
+        >
+          <h3>Categorias de Artigos</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+              >
+                Comportamento e Atitude
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Relacionamentos e Paquera
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Estilo de Vida e Fitness
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Humor e Opinião
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Carreira e Finanças
+              </a>
+            </li>
+          </ul>
+        </section>
+
+
+                <section
+          class="widget newsletter"
+        >
+          <h3>Assine Nossa Newsletter Exclusiva</h3>
+          <form>
+            <label
+              for="nome"
+            >
+              Seu Nome:
+            </label>
+
+
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+            />
+
+
+            <label
+              for="email"
+            >
+              Seu Melhor E-mail:
+            </label>
+
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+
+
+            <button
+              type="submit"
+            >
+              Assinar Agora!
+            </button>
+          </form>
+        </section>
+
+
+                <section
+          class="widget twitter-feed"
+        >
+          <h3>Nosso Último Tweet</h3>
+          <p>
+            <em>Este é um espaço reservado para a integração do feed do Twitter (X).
+              No contexto de um projeto real, um widget JS seria incorporado aqui.</em>
+          </p>
+        </section>
+
+
+                <section
+          class="widget posts-recentes"
+        >
+          <h3>Posts Recentes do Blog</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+              >
+                Futuro: visão, metas e planejamento
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Voluntariado: dando de volta à comunidade
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Arte e cultura: criatividade masculina
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Natureza: reconexão essencial do homem
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Política e sociedade: cidadão consciente
+              </a>
+            </li>
+          </ul>
+        </section>
+
+
+                <section
+          class="widget posts-populares"
+        >
+          <h3>Posts Mais Populares (Top 5)</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+              >
+                Manual do Macho Moderno - Edição 2025
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                O mito da masculinidade tóxica: o que é verdade?
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Moda masculina: menos é mais e o poder da simplicidade
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Relacionamentos sem drama: a chave da maturidade emocional
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Humor: a arma secreta do macho em situações tensas
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+          </div>
+            <footer
+      class="site-footer"
+    >
+
+
+      <div
+        class="container"
+      >
+
+
+                <p>
+          &copy;
+          2025 O Blog do Macho (versão acadêmica).
+          Todos os direitos reservados.
+        </p>
+
+
+        <p>
+          Projeto criado exclusivamente para fins de estudo em Engenharia de Computação - FACENS.
+          Não possui fins comerciais.
+        </p>
+
+
+                <nav
+          class="footer-nav"
+        >
+
+
+          <ul>
+            <li>
+              <a
+                href="#topo"
+              >
+                Voltar ao topo da página
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Política de Privacidade e Cookies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Sobre a Equipe do Blog
+              </a>
+            </li>
+          </ul>
+
+
+        </nav>
+
+
+                <div
+          class="social-media"
+        >
+
+
+          <h3>Siga-nos nas Redes Sociais</h3>
+
+
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="facebook"
+              >
+                Facebook (F)
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+                class="twitter"
+              >
+                Twitter (X)
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+                class="instagram"
+              >
+                Instagram (IG)
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="#"
+                class="youtube"
+              >
+                YouTube (YT)
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+                        <div
+          class="video-section"
+        >
+
+
+          <h3>Vídeo em Destaque do Canal</h3>
+
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ZXAeEjI1TvM"
+            title="Serjão Berranteiro - Meme Oficial do Blog do Macho"
+            frameborder="0"
+            allow="accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share"
+            allowfullscreen
+          >
+                      </iframe>
+
+
+        </div>
+              </div>
+          </footer>
+            <script
+      src="script.js"
+      defer
+    >
+      // Arquivo de lógica do cliente para interações e funcionalidades
+    </script>
+
+
+  </body>
+
+
 </html>
-
-<!-- Projeto finalizado em 2025 -->

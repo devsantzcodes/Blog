@@ -78,6 +78,29 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Voltar ao Topo' iniciada.");
   }
 
+  // Smooth Scrolling for Navigation Links
+  // -----------------------------------------------------------------------------------
+  function setupSmoothScrolling() {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        const href = this.getAttribute("href");
+        if (href.startsWith("#")) {
+          event.preventDefault();
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }
+      });
+    });
+    console.log("Funcionalidade 'Smooth Scrolling' iniciada.");
+  }
+
   // 2. Modo Escuro (Dark Mode)
   // Adiciona um botão para alternar entre os temas claro e escuro.
   // -----------------------------------------------------------------------------------
@@ -85,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.createElement("button");
     toggleButton.innerText = "🌙";
     toggleButton.id = "dark-mode-toggle";
-    document.querySelector("header .container").appendChild(toggleButton); // Adiciona ao header
+    document.querySelector("header .containers").appendChild(toggleButton); // Adiciona ao header
 
     // Estilos do botão de toggle
     toggleButton.style.position = "absolute";
@@ -348,6 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Executa todas as funções de inicialização.
   // ===================================================================================
   setupBackToTopButton();
+  setupSmoothScrolling();
   setupDarkModeToggle();
   setupImageModal();
   setupStickyHeader();

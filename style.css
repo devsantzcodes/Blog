@@ -33,6 +33,9 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: auto;
+
+  display: flex;
+  flex-direction: column;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -97,6 +100,7 @@ nav ul li a:hover {
 /* --------- LAYOUT PRINCIPAL --------- */
 main {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -218,7 +222,7 @@ main {
 }
 
 .post img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin-bottom: 15px;
@@ -437,7 +441,7 @@ button {
   color: #ccc;
 }
 
-/* Estilos do Modo Escuro */
+/* --------- ESTILOS DO MODO ESCURO --------- */
 body.dark-mode {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: #e0e0e0;
@@ -573,7 +577,7 @@ body.dark-mode #back-to-top:hover {
 }
 
 body.dark-mode #dark-mode-toggle {
-  background-color: #444;
+  background-color: #333;
   color: #fff;
   border: 1px solid #666;
 }
@@ -582,7 +586,23 @@ body.dark-mode #dark-mode-toggle:hover {
   background-color: #555;
 }
 
-/* Posicionamento do cabeçalho para elementos absolutos */
-header {
-  position: relative;
+/* --- Responsividade (telas pequenas) --- */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .posts,
+  aside {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
 }

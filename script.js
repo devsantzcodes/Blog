@@ -101,46 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Funcionalidade 'Smooth Scrolling' iniciada.");
   }
 
-  // 2. Modo Escuro (Dark Mode)
-  // Adiciona um botão para alternar entre os temas claro e escuro.
-  // -----------------------------------------------------------------------------------
-  function setupDarkModeToggle() {
-    const toggleButton = document.createElement("button");
-    toggleButton.innerText = "🌙";
-    toggleButton.id = "dark-mode-toggle";
-    document.querySelector("header .containers").appendChild(toggleButton); // Adiciona ao header
-
-    // Estilos do botão de toggle
-    toggleButton.style.position = "absolute";
-    toggleButton.style.top = "20px";
-    toggleButton.style.right = "20px";
-    toggleButton.style.backgroundColor = "#f5f5f5";
-    toggleButton.style.color = "#222";
-    toggleButton.style.border = "1px solid #ddd";
-    toggleButton.style.borderRadius = "50%";
-    toggleButton.style.width = "40px";
-    toggleButton.style.height = "40px";
-    toggleButton.style.fontSize = "20px";
-    toggleButton.style.cursor = "pointer";
-
-    toggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-
-      // Atualiza o ícone do botão
-      if (document.body.classList.contains("dark-mode")) {
-        toggleButton.innerText = "☀️";
-        toggleButton.style.backgroundColor = "#333";
-        toggleButton.style.color = "#fff";
-      } else {
-        toggleButton.innerText = "🌙";
-        toggleButton.style.backgroundColor = "#f5f5f5";
-        toggleButton.style.color = "#222";
-      }
-      console.log("Modo Escuro alternado.");
-    });
-    console.log("Funcionalidade 'Modo Escuro' iniciada.");
-  }
-
   // 3. Validação do Formulário de Newsletter
   // Verifica se os campos de nome e e-mail estão preenchidos corretamente.
   // -----------------------------------------------------------------------------------
@@ -364,6 +324,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     type();
     console.log("Funcionalidade 'Efeito de Digitação' iniciada.");
+  }
+
+  // 2. Modo Escuro (Dark Mode)
+  // Adiciona um botão para alternar entre os temas claro e escuro.
+  // -----------------------------------------------------------------------------------
+  function setupDarkModeToggle() {
+    const toggleButton = document.createElement("button");
+    toggleButton.innerText = "🌙";
+    toggleButton.id = "dark-mode-toggle";
+    document.querySelector("header .containers").appendChild(toggleButton); // Adiciona ao header
+
+    // Estilos do botão de toggle
+    toggleButton.style.position = "absolute";
+    toggleButton.style.top = "20px";
+    toggleButton.style.right = "20px";
+    toggleButton.style.backgroundColor = "#f5f5f5";
+    toggleButton.style.color = "#222";
+    toggleButton.style.border = "1px solid #ddd";
+    toggleButton.style.borderRadius = "50%";
+    toggleButton.style.width = "40px";
+    toggleButton.style.height = "40px";
+    toggleButton.style.fontSize = "20px";
+    toggleButton.style.cursor = "pointer";
+    toggleButton.style.zIndex = "1001"; // Acima do header
+
+    // Verifica o estado salvo no localStorage
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+      toggleButton.innerText = "☀️";
+      toggleButton.style.backgroundColor = "#333";
+      toggleButton.style.color = "#fff";
+    }
+
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      const nowDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", nowDark);
+
+      // Atualiza o ícone do botão
+      if (nowDark) {
+        toggleButton.innerText = "☀️";
+        toggleButton.style.backgroundColor = "#333";
+        toggleButton.style.color = "#fff";
+      } else {
+        toggleButton.innerText = "🌙";
+        toggleButton.style.backgroundColor = "#f5f5f5";
+        toggleButton.style.color = "#222";
+      }
+      console.log("Modo Escuro alternado.");
+    });
+
+    console.log("Funcionalidade 'Modo Escuro' iniciada.");
   }
 
   // ===================================================================================
